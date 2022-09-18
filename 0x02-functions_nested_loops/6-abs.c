@@ -2,18 +2,16 @@
 #include <stdlib.h>
 
 /**
- *  _abs - computes absolute value of an integer
- *  @n: check for parameter
- *
- * Return: Always 0 (Success)
+ * _abs - function that computes the absolute value of an integer
+ * @c:  is the int that will use for the argument of the function
+ * Return: 0
  */
-int _abs(int n)
+int _abs(int c)
 {
-	if (n < 0)
+	if (c > 0 || c == 0)
 	{
-		n = -n;
-		return (n)
+		return (c);
 	}
-
-	return (n);
+	else
+		return (c * -1);
 }
