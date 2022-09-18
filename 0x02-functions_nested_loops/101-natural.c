@@ -1,17 +1,24 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
- * main - prints count of multiples
- * of 3 or 5 below 1024
- * Return: return 0
+ * main - main block
+ * Description - computes and prints the sum of all the multiples of 3 or
+ * 5 below 1024 excluded followed by a new line
+ * Return: 0
  */
 int main(void)
 {
-	int n, sum = 0;
-	for (n = 0; n < 1024; n++)
+	int num = 0;
+	int sum = 0;
+
+	while (num <= 1023)
 	{
-		if ((n % 3) == 0 || (n % 5) == 0)
-			sum += n;
+		if (num % 3 == 0 || num % 5 == 0)
+		{
+			sum = sum + num;
+		}
+		num++;
 	}
-	printf("%d\n", sum);
+	printf("%i\n", sum);
 	return (0);
 }
