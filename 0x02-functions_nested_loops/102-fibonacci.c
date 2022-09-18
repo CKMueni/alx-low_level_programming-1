@@ -1,24 +1,26 @@
 #include <stdio.h>
 /**
- * main - main block
- * Description - fibonacci numbers
- * Return: 0
+ * main - prints out first 50
+ * fibonacci suit numbers
+ * Return: return 0
  */
 int main(void)
 {
-	int num;
-	long int num1 = 0, num2 = 1, nextNum;
-	for (num = 0; num <= 49; num++)
+	int inc;
+	unsigned long n1 = 0, n2 = 1, n3;
+	for (inc = 0; inc < 50; inc++)
 	{
-		nextNum = num1 + num2;
-		num1 = num2;
-		num2 = nextNum;
-		printf("%lu", nextNum);
-		if (num < 49)
-		{
+		n3 = n1 + n2;
+		printf("%lu", n3);
+		n1 = n2;
+		n2 = n3;
+
+		if (inc == 49)
+			printf("\n");
+		else
 			printf(", ");
-		}
+
 	}
-	putchar('\n');
+
 	return (0);
 }
